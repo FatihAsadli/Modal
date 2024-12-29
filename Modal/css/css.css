@@ -1,0 +1,113 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --transition: 0.2s ease-in-out;
+  }
+  
+
+body {
+  background: url(/Modal/pictures/R.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.main-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 600px;
+  height: 250px;
+  background-color: white;
+  border-radius: 10px;
+  margin: 0px 20px;
+}
+
+.main-content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.main-btn {
+  width: auto;
+  height: auto;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(to right, rgb(57, 155, 247), rgb(253, 251, 151), rgb(230, 227, 227));
+  background-color: transparent;
+  background-size: 200%;
+  font-size: 16px;
+  transition: var(--transition);
+  color: white;
+  animation: text-gradient 2.5s linear infinite;
+}
+
+@keyframes text-gradient {
+    from {
+      background-position: 200%;
+    }
+  }
+
+.main-btn:hover {
+    font-size: 14px;
+}
+
+
+h1 {
+  font-size: 52px;
+}
+
+.modal-overlay {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 600px;
+    height: 250px;
+    background-color: white;
+    border-radius: 10px;
+    margin: 0px 20px;
+}
+
+.modal {
+    display: none;
+    width: auto;
+    height: auto;
+    transition: var(--transition);
+}
+
+.show-modal {
+    display: block;
+    transition: var(--transition);
+}
+
+.fa-times {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 32px;
+    color: rgb(206, 27, 27);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.fa-times:hover {
+    color: rgb(255, 0, 0);
+}
+.hidden {
+    display: none;
+  }
